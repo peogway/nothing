@@ -260,10 +260,10 @@ body {
 /* For extra small screens (very mobile) */
 @media screen and (max-width: 500px) {
   #heading {
-    transform: translate(60px, 0px);
+    transform: translate(30px, 0px);
   }
   .heart {
-    margin-left: 35px;
+    margin-left: 95px;
     transform: translate(25px, 50px);
   }
   .heading {
