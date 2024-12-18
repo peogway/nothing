@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kaushan+Script&family=Gloria+Hallelujah&display=swap');
+
+.heading {
+  font-size: 100px;
+  font-family: 'Gloria Hallelujah', cursive;
+  transform: translate(0, -60px);
+  margin-bottom: 150px;
+}
+#heading {
+  font-size: 100px;
+  font-family: 'Gloria Hallelujah', cursive;
+  transform: translate(0, -20px);
+  margin-bottom: 150px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+body {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(./background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background: #000; */
+}
+
+.box {
+  display: flex;
+  transform: translate(200px, -230px);
+  /* margin-top: 20px; */
+}
+
+.box .eye {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  display: block;
+  background: #fff;
+  margin: 0 20px;
+  border-radius: 50%;
+  box-shadow: 0 5px 45px rgb(0, 0, 0, 0.2);
+  inset: 0 0 15px #f2761e;
+  inset: 0 0 25px #f2761e;
+}
+
+.box .eye::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #000;
+  border: 10px solid #2196f3;
+  box-sizing: border-box;
+}
+
+.heart {
+  height: 200px;
+  width: 200px;
+  background: #f20044;
+  position: relative;
+  transform: rotate(-45deg);
+  top: -100px; /* Adjust this value to move the heart closer to the heading */
+  left: 0; /* Adjust this value to move the heart horizontally */
+  box-shadow: -10px 10px 90px #f20044;
+  animation: heart 0.6s linear infinite;
+}
+
+@keyframes heart {
+  0% {
+    transform: rotate(-45deg) scale(1.07);
+  }
+  80% {
+    transform: rotate(-45deg) scale(1);
+  }
+  100% {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+.heart:before {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: #f20044;
+  top: -50%;
+  border-radius: 150px;
+  box-shadow: -10px -10px 90px #f20044;
+}
+.heart:after {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  background: #f20044;
+  right: -50%;
+  border-radius: 150px;
+  box-shadow: 10px 10px 90px #f20044;
+}
+
+.heart-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: none;
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.heart button {
+  z-index: 1;
+  color: #fff;
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button {
+  list-style-type: none;
+  margin-top: 50px;
+  color: #fff;
+  display: block;
+  padding: 20px 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 50px;
+  position: relative;
+  z-index: 1;
+  background: rgb(111, 201, 111);
+  border-radius: 25%;
+  /* border: none; */
+  color: #5b5353;
+  /* font: 'Pacifico'; */
+  cursor: pointer;
+  font-family: 'Gloria Hallelujah', cursive;
+  margin-top: 200px;
+}
+
+.button:hover {
+  border: none;
+  color: #000;
+  background: none;
+  color: #edd8d8;
+  transition: 0.3s;
+  padding: 20px 150px;
+}
+.button:hover:before {
+  left: 58px;
+  opacity: 1;
+}
+
+.button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -26px;
+  width: 50%;
+  height: 100%;
+  background-color: #f20044;
+  transform: rotate(35deg);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  z-index: -1;
+  transition: 0.5s;
+  opacity: 0;
+}
+.button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -26px;
+  width: 50%;
+  height: 100%;
+  background-color: #f20044;
+  transform: rotate(-35deg);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  z-index: -1;
+  transition: 0.5s;
+  opacity: 0;
+}
+.button:hover:after {
+  opacity: 1;
+  right: 58px;
+}
+
+.hide {
+  display: none;
+}
+
+#sneaky-button {
+  position: absolute;
+  height: 3rem;
+  width: max-content;
+  padding: 8px 20px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 20px #fff;
+  background-image: linear-gradient(
+    to right,
+    #314755 0%,
+    #25a0da 51%,
+    #314755 100%
+  );
+  background-size: 200% auto;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 3rem;
+  white-space: normal; /* Allow text to wrap */
+  overflow-wrap: break-word; /* Break long words to prevent overflow */
+}
+
