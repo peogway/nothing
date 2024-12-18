@@ -235,6 +235,7 @@ body {
   line-height: 3rem;
   white-space: normal; /* Allow text to wrap */
   overflow-wrap: break-word; /* Break long words to prevent overflow */
+  transform: translate(300px, 450px);
 }
 
 @media screen and (max-width: 900px) {
@@ -259,6 +260,9 @@ body {
 
 /* For extra small screens (very mobile) */
 @media screen and (max-width: 500px) {
+  #sneaky-button {
+    transform: translate(150px, 550px);
+  }
   #heading {
     transform: translate(30px, 0px);
   }

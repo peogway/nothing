@@ -64,6 +64,7 @@ const getRandomQuote = () => {
             while (quote === initialQuote || !quote) quote = getRandomQuote();
 
             button.innerHTML = quote;
+            button.style.transform = "none";
 
             let top = getRandomNum(window.innerHeight - button.offsetHeight);
             let left = getRandomNum(window.innerWidth - button.offsetWidth);
@@ -101,30 +102,30 @@ const isOverlapping = (rect, elements) => {
     return false;
 };
 
-const setRandomPosition = () => {
-    let top, left, rect;
-    const quoteWidth = button.offsetWidth;
-    const quoteHeight = button.offsetHeight;
-    do {
-        top = getRandomNum(window.innerHeight - quoteHeight);
-        left = getRandomNum(window.innerWidth - quoteWidth);
-        rect = {
-            top,
-            left,
-            right: left + quoteWidth,
-            bottom: top + quoteHeight,
-        };
-    } while (
-        isOverlapping(rect, dangerZone) ||
-        rect.bottom > window.innerHeight ||
-        rect.right > window.innerWidth ||
-        rect.top < 0 ||
-        rect.left < 0
-    );
+// const setRandomPosition = () => {
+//     let top, left, rect;
+//     const quoteWidth = button.offsetWidth;
+//     const quoteHeight = button.offsetHeight;
+//     do {
+//         top = getRandomNum(window.innerHeight - quoteHeight);
+//         left = getRandomNum(window.innerWidth - quoteWidth);
+//         rect = {
+//             top,
+//             left,
+//             right: left + quoteWidth,
+//             bottom: top + quoteHeight,
+//         };
+//     } while (
+//         isOverlapping(rect, dangerZone) ||
+//         rect.bottom > window.innerHeight ||
+//         rect.right > window.innerWidth ||
+//         rect.top < 0 ||
+//         rect.left < 0
+//     );
 
-    button.style.position = "absolute";
-    button.style.top = `${top}px`;
-    button.style.left = `${left}px`;
-};
+//     button.style.position = "absolute";
+//     button.style.top = `${top}px`;
+//     button.style.left = `${left}px`;
+// };
 
-setRandomPosition();
+// setRandomPosition();
