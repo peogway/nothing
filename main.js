@@ -21,7 +21,10 @@ const toggleHeart = () => {
 };
 
 document.querySelector("body").addEventListener("mousemove", eyeball);
-document.querySelector("body").addEventListener("touchmove", eyeball);
+document.querySelector("body").addEventListener("touchmove", (e) => {
+    e.preventDefault(); // Prevent scrolling while touching
+    eyeball(e);
+});
 
 const button = document.querySelector("#sneaky-button");
 
