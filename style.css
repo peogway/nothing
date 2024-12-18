@@ -259,6 +259,12 @@ body {
 
 /* For extra small screens (very mobile) */
 @media screen and (max-width: 500px) {
+  #heading {
+    transform: translate(95px, 0px);
+  }
+  .heart {
+    transform: translate(95px, 50px);
+  }
   .heading {
     text-align: center;
     font-size: 60px;
@@ -266,13 +272,13 @@ body {
     width: 300px; /* The width adjusts to fit the content */
     white-space: normal; /* Allows wrapping */
     overflow-wrap: break-word;
-    transform: translate(100px, -50px);
+    transform: translate(70px, -50px);
   }
   .box {
-    transform: translate(60px, -190px);
+    transform: translate(40px, -190px);
   }
   .button {
-    transform: translate(65px, 70px);
+    transform: translate(45px, 70px);
   }
 }
 
