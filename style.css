@@ -260,17 +260,19 @@ body {
 /* For extra small screens (very mobile) */
 @media screen and (max-width: 500px) {
   .heading {
+    text-align: center;
     font-size: 60px;
     /* transform: translate(10px, -150px); */
     width: 300px; /* The width adjusts to fit the content */
     white-space: normal; /* Allows wrapping */
     overflow-wrap: break-word;
+    transform: translate(100px, -50px);
   }
   .box {
-    transform: translate(-45px, -220px);
+    transform: translate(60px, -190px);
   }
   .button {
-    transform: translate(-30px, 30px);
+    transform: translate(65px, 70px);
   }
 }
 
