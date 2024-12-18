@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Kaushan+Script&family=Gloria+Hallelujah&display=swap');
 
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .heading {
   font-size: 100px;
   font-family: 'Gloria Hallelujah', cursive;
@@ -40,14 +45,14 @@ body {
 .box .eye {
   position: relative;
   width: 120px;
-  height: 120px;
+  height: 115px;
   display: block;
   background: #fff;
   margin: 0 20px;
   border-radius: 50%;
   box-shadow: 0 5px 45px rgb(0, 0, 0, 0.2);
-  inset: 0 0 15px #f2761e;
-  inset: 0 0 25px #f2761e;
+  inset: 0 0 30px #f2761e;
+  inset: 0 0 45px #f2761e;
 }
 
 .box .eye::before {
@@ -230,5 +235,42 @@ body {
   line-height: 3rem;
   white-space: normal; /* Allow text to wrap */
   overflow-wrap: break-word; /* Break long words to prevent overflow */
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    transform: scale(0.8); /* Scale down more */
+    transform-origin: top left;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .box {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+/* For extra small screens (very mobile) */
+@media screen and (max-width: 500px) {
+  .heading {
+    font-size: 60px;
+    /* transform: translate(10px, -150px); */
+    width: 300px; /* The width adjusts to fit the content */
+    white-space: normal; /* Allows wrapping */
+    overflow-wrap: break-word;
+  }
+  .box {
+    transform: translate(-45px, -220px);
+  }
+  .button {
+    transform: translate(-30px, 30px);
+  }
 }
 

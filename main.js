@@ -10,7 +10,7 @@ const eyeball = () => {
 };
 
 const toggleHeart = () => {
-    // document.getElementById("evrthing").classList.toggle("hide");
+    document.getElementById("sneaky-button").classList.toggle("hide");
     document.querySelector(".container").classList.toggle("hide");
     document.querySelectorAll(".after-click").forEach((tag) => {
         tag.classList.remove("hide");
