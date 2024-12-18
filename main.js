@@ -127,7 +127,4 @@ const setRandomPosition = () => {
     button.style.left = `${left}px`;
 };
 
-let quote = getRandomQuote();
-while (!quote) quote = getRandomQuote();
-button.innerHTML = quote;
 setRandomPosition();
